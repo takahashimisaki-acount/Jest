@@ -9,8 +9,8 @@
     "lib": ["ES2023", "DOM"],
 
     /* Modules */
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "module": "commonjs",
+    "moduleResolution": "node",
     // "baseUrl": "./",
     "paths": {
       "~/*": ["./src/*"]
@@ -32,6 +32,6 @@
     /* Completeness */
     "skipLibCheck": true
   },
-  "include": ["src"],
+  "include": ["src", "test"],
   "exclude": ["node_modules"]
 }

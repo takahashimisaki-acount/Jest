@@ -10,7 +10,7 @@ const creationDate = new Date(today);
 creationDate.setFullYear(today.getFullYear() - 1);
 
 const expectedData = {
-  id: 1,
+  id: "1",
   email: 'john@mail.com',
   password: 'changeme',
   name: 'Jhon',
@@ -22,7 +22,7 @@ const expectedData = {
 
 describe('getUserById', () => {
   test('取得に成功した場合はexpectedDataと同じデータが取得されること', async () => {
-    mockApi.get.mockResolvedValueOnce({ status: 200, data: expectedData });
+    mockApi.get.mockResolvedValueOnce({ status: 200, data: expectedData } as any);
 
     const result = await getUserById('1');
     expect(result).toEqual(expectedData);
